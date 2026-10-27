@@ -1,0 +1,623 @@
+/* General Settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  color: #263d3b;
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.navbar {
+  min-height: 94px;
+  max-width: 1440px;
+  margin: auto;
+  padding: 18px 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-left a {
+  font-size: 13px;
+  transition: color 0.3s;
+}
+
+.nav-left a:hover {
+  color: #1c8580;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  color: #23847d;
+  font-size: 27px;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.partner-btn,
+.donate-btn {
+  display: inline-block;
+  padding: 11px 20px;
+  font-size: 12px;
+  border: 1px solid #287f79;
+  transition: 0.3s;
+}
+
+.partner-btn {
+  color: #287f79;
+}
+
+.partner-btn:hover {
+  background: #e8f3f1;
+}
+
+.donate-btn {
+  color: #ffffff;
+  background: #287f79;
+}
+
+.donate-btn:hover {
+  background: #1b625e;
+}
+
+/* Christmas Banner */
+.christmas-banner {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 70px 20px;
+  color: #ffffff;
+  background:
+    linear-gradient(rgba(15, 108, 103, 0.55), rgba(15, 108, 103, 0.55)),
+    url("https://images.unsplash.com/photo-1512389142860-9c449e58a543?auto=format&fit=crop&w=1800&q=85")
+      center/cover;
+}
+
+.christmas-content {
+  max-width: 850px;
+}
+
+.small-title,
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+.christmas-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(38px, 5vw, 68px);
+  line-height: 1.15;
+  margin-bottom: 22px;
+}
+
+.christmas-content p:not(.small-title) {
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.white-btn {
+  display: inline-block;
+  background: #ffffff;
+  color: #277b75;
+  padding: 13px 27px;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.white-btn:hover {
+  background: #e3efed;
+  transform: translateY(-2px);
+}
+
+/* Hero */
+.hero {
+  min-height: 650px;
+  background:
+    linear-gradient(90deg, rgba(11, 76, 72, 0.78), rgba(11, 76, 72, 0.1)),
+    url("https://images.unsplash.com/photo-1489493585363-d69421e0edd3?auto=format&fit=crop&w=2000&q=85")
+      center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  color: #ffffff;
+  padding: 80px 9%;
+  max-width: 850px;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(42px, 5.5vw, 76px);
+  line-height: 1.12;
+  margin-bottom: 24px;
+}
+
+.hero-overlay > p:not(.eyebrow) {
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+
+/* Feature Cards */
+.features {
+  background: #267f79;
+  padding: 85px 6%;
+}
+
+.feature-grid {
+  max-width: 1400px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 35px 25px;
+}
+
+.feature-card {
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.feature-card img {
+  height: 270px;
+  transition: transform 0.5s;
+}
+
+.feature-card:hover img {
+  transform: scale(1.04);
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-info {
+  padding: 27px 26px 32px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.feature-info h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.feature-info p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.outline-btn {
+  border: 1px solid #287f79;
+  color: #287f79;
+  padding: 10px 19px;
+  font-size: 12px;
+  margin-top: auto;
+  transition: 0.3s;
+}
+
+.outline-btn:hover {
+  background: #287f79;
+  color: #ffffff;
+}
+
+/* Statistics */
+.stats {
+  background: #dcece8;
+  color: #287f79;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.stats h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(50px, 7vw, 86px);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.stats p {
+  font-size: clamp(16px, 2vw, 22px);
+  margin-top: 12px;
+}
+
+/* Blog */
+.blog {
+  padding: 100px 6%;
+  max-width: 1600px;
+  margin: auto;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-heading p {
+  color: #287f79;
+  font-size: 11px;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.section-heading h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 44px;
+  font-weight: 500;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.blog-card {
+  border: 1px solid #eeeeee;
+  background: #ffffff;
+}
+
+.blog-card img {
+  height: 260px;
+}
+
+.blog-content {
+  padding: 25px;
+}
+
+.blog-date {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #287f79;
+  margin-bottom: 12px;
+}
+
+.blog-content h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 22px;
+}
+
+.blog-content a {
+  color: #287f79;
+  font-size: 13px;
+}
+
+/* Quote Banner */
+.quote-banner {
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 70px 8%;
+  background:
+    linear-gradient(rgba(15, 92, 87, 0.62), rgba(15, 92, 87, 0.62)),
+    url("https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=2000&q=85")
+      center/cover no-repeat;
+}
+
+.quote-overlay {
+  max-width: 950px;
+  color: #ffffff;
+}
+
+.quote-overlay p {
+  font-size: 12px;
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+}
+
+.quote-overlay h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(34px, 4.8vw, 62px);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gallery img {
+  height: 360px;
+}
+
+/* Newsletter */
+.newsletter {
+  background: #f4f7f5;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.newsletter h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 38px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.newsletter p {
+  margin-bottom: 25px;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  max-width: 550px;
+  margin: auto;
+}
+
+.newsletter input {
+  min-width: 0;
+  flex: 1;
+  padding: 14px;
+  border: 1px solid #b9ceca;
+  background: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.newsletter button {
+  padding: 14px 24px;
+  border: none;
+  background: #287f79;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Footer */
+.footer {
+  background: #267f79;
+  color: #ffffff;
+  padding: 70px 7% 25px;
+}
+
+.footer-content {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 55px;
+  padding-bottom: 50px;
+}
+
+.footer-brand h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 29px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.footer-brand p {
+  max-width: 360px;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 11px;
+}
+
+.footer-links h3 {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 11px;
+}
+
+/* Floating Buttons */
+.floating-buttons {
+  position: fixed;
+  right: 20px;
+  bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999;
+}
+
+.floating-buttons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #287f79;
+  color: #ffffff;
+  font-size: 21px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Tablet */
+@media (max-width: 1050px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-left,
+  .nav-right {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    order: -1;
+    width: 100%;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .blog-grid {
+    gap: 18px;
+  }
+
+  .blog-card img {
+    height: 220px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  .navbar {
+    padding: 17px 15px;
+    gap: 15px;
+  }
+
+  .logo {
+    font-size: 25px;
+  }
+
+  .nav-left {
+    gap: 13px;
+  }
+
+  .nav-left a {
+    font-size: 12px;
+  }
+
+  .nav-right {
+    gap: 10px;
+  }
+
+  .christmas-banner {
+    min-height: 400px;
+  }
+
+  .hero {
+    min-height: 520px;
+    background-position: center;
+  }
+
+  .hero-overlay {
+    padding: 60px 7%;
+  }
+
+  .feature-grid,
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features,
+  .blog {
+    padding: 60px 6%;
+  }
+
+  .feature-card img {
+    height: 250px;
+  }
+
+  .section-heading h2 {
+    font-size: 36px;
+  }
+
+  .blog-card img {
+    height: 250px;
+  }
+
+  .quote-banner {
+    min-height: 420px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery img {
+    height: 280px;
+  }
+
+  .newsletter form {
+    flex-direction: column;
+  }
+
+  .newsletter button {
+    width: 100%;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
